@@ -23,12 +23,12 @@ namespace ChainOfResponsibility
 			//John Doe, 5874-8587-2578-8955, 1111, 1_000
 
 			Console.WriteLine("Enter card number: ");
-			cardNumber = Console.ReadLine();
+			cardNumber = Console.ReadLine()!;
 			Console.WriteLine("Enter pin: ");
-			pin = int.Parse(Console.ReadLine());
+			pin = int.Parse(Console.ReadLine()!);
 			Console.WriteLine("Enter amount: ");
-			money = decimal.Parse(Console.ReadLine());
-			verifyHandler.Handle(cardNumber, pin, money);
+			money = decimal.Parse(Console.ReadLine()!);
+			verifyHandler?.Handle(cardNumber, pin, money);
 
 			
 
